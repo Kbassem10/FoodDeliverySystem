@@ -1,4 +1,4 @@
-package model;
+package com.fooddeliverysystem.model;
 
 import java.util.ArrayList;
 import java.util.List;

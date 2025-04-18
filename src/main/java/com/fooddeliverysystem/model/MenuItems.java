@@ -1,4 +1,4 @@
-package model;
+package com.fooddeliverysystem.model;
 
 public class MenuItems {
     private String itemId;
