@@ -1,5 +1,6 @@
 package com.fooddeliverysystem.model;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,6 +16,10 @@ public class Order {
     private String customerAddress;
     private String customerPhone;
     
+    // Add order status and timestamp
+    private String orderStatus;
+    private LocalDateTime orderTime;
+    
     // Constructor
     public Order(String customerName, String customerAddress, String customerPhone) {
         this.orderItems = new ArrayList<>();
@@ -22,6 +27,8 @@ public class Order {
         this.customerName = customerName;
         this.customerAddress = customerAddress;
         this.customerPhone = customerPhone;
+        this.orderStatus = "Pending";
+        this.orderTime = LocalDateTime.now();
     }
     
     // Default constructor
@@ -31,6 +38,8 @@ public class Order {
         this.customerName = "";
         this.customerAddress = "";
         this.customerPhone = "";
+        this.orderStatus = "Pending";
+        this.orderTime = LocalDateTime.now();
     }
     
     // Add item to order
@@ -95,5 +104,17 @@ public class Order {
     
     public void setCustomerPhone(String customerPhone) {
         this.customerPhone = customerPhone;
+    }
+    
+    public String getOrderStatus() {
+        return orderStatus;
+    }
+    
+    public void setOrderStatus(String orderStatus) {
+        this.orderStatus = orderStatus;
+    }
+    
+    public LocalDateTime getOrderTime() {
+        return orderTime;
     }
 }

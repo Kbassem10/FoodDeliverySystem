@@ -22,6 +22,9 @@ public class OrderController {
     // Reference to the MenuItemsController (like importing another view/service in Django)
     private MenuItemsController menuItemsController;
     
+    // Add reference to SalesController
+    private SalesController salesController;
+    
     // Singleton instance
     private static OrderController instance;
     
@@ -35,6 +38,7 @@ public class OrderController {
     private OrderController() {
         orders = new HashMap<>();
         menuItemsController = MenuItemsController.getInstance();
+        salesController = SalesController.getInstance();
         initializeCurrentOrder();
     }
     
@@ -99,7 +103,11 @@ public class OrderController {
         }
         
         String orderId = generateOrderId();
+        currentOrder.setOrderStatus("Confirmed");
         orders.put(orderId, currentOrder);
+        
+        // Record the sale
+        salesController.recordSale(currentOrder);
         
         // Create a new current order (like clearing the cart after checkout)
         initializeCurrentOrder();
@@ -155,6 +163,25 @@ public class OrderController {
      */
     public double getCurrentOrderTotal() {
         return currentOrder.getTotalPrice();
+    }
+    
+    /**
+     * Update order status
+     */
+    public boolean updateOrderStatus(String orderId, String status) {
+        Order order = getOrder(orderId);
+        if (order != null) {
+            order.setOrderStatus(status);
+            return true;
+        }
+        return false;
+    }
+    
+    /**
+     * Get the total sales for today
+     */
+    public double getTodayTotalSales() {
+        return salesController.getTodaySales();
     }
     
 }
