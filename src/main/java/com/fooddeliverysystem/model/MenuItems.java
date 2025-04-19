@@ -6,7 +6,7 @@ public class MenuItems {
     private double price;
     private String category;
     
-    // Constructor
+    // parametrized Constructor
     public MenuItems(String itemId, String name, double price, String category) {
         if (price < 0){
             throw new ArithmeticException("Negative numbers are not allowed for a price");
@@ -25,7 +25,7 @@ public class MenuItems {
         this.category = "";
     }
     
-    // Getters and setters
+    // setters and getters
     public String getItemId() {
         return itemId;
     }

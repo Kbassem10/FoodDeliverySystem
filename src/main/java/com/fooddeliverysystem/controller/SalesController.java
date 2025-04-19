@@ -22,9 +22,7 @@ public class SalesController {
         return instance;
     }
     
-    /**
-     * Record a sale for the current day
-     */
+    //Record a sale for the current day
     public void recordSale(Order order) {
         if (order == null) {
             return;
@@ -35,24 +33,18 @@ public class SalesController {
         dailySales.put(today, currentSales + order.getTotalPrice());
     }
     
-    /**
-     * Get the total sales for today
-     */
+    //Get the total sales for today
     public double getTodaySales() {
         LocalDate today = LocalDate.now();
         return dailySales.getOrDefault(today, 0.0);
     }
     
-    /**
-     * Get the total sales for a specific date
-     */
+    // Get the total sales for a specific date
     public double getSalesForDate(LocalDate date) {
         return dailySales.getOrDefault(date, 0.0);
     }
     
-    /**
-     * Get all daily sales data
-     */
+    //Get all daily sales data
     public Map<LocalDate, Double> getAllSalesData() {
         return new HashMap<>(dailySales);
     }

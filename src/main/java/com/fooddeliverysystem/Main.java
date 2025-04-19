@@ -1,3 +1,4 @@
+//this file is only to test the backend and it's fully AI generated and not revised
 package com.fooddeliverysystem;
 
 import java.util.List;
@@ -9,10 +10,6 @@ import com.fooddeliverysystem.controller.SalesController;
 import com.fooddeliverysystem.model.MenuItems;
 import com.fooddeliverysystem.model.Order;
 
-/**
- * This class demonstrates the backend functionality of the Food Delivery System
- * without the JavaFX GUI.
- */
 public class Main {
     
     private static MenuItemsController menuController = MenuItemsController.getInstance();

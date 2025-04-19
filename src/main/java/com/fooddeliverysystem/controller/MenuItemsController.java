@@ -1,3 +1,4 @@
+// this is a file named controller that controls the backend and the frontend together
 package com.fooddeliverysystem.controller;
 
 import java.util.ArrayList;
@@ -6,16 +7,20 @@ import java.util.List;
 import com.fooddeliverysystem.model.MenuItems;
 
 public class MenuItemsController {
-    
+
+    //intialize a list to track the items of the menu
     private List<MenuItems> menuItemsList;
 
+    //create an instance "Important to run in javaFX"
     private static MenuItemsController instance;
     
+    //contructor for the class of the contorler to ser a value for the menu
     private MenuItemsController() {
         menuItemsList = new ArrayList<>();
         initializeMenuItems();
     }
     
+    //another constructor to getInstance it's improtant to run the javaFX
     public static MenuItemsController getInstance() {
         if (instance == null) {
             instance = new MenuItemsController();
@@ -23,6 +28,7 @@ public class MenuItemsController {
         return instance;
     }
     
+    //initialize MenuItems by some value in the start of the app
     private void initializeMenuItems() {
         // Add some sample menu items
         addMenuItem(new MenuItems("P1", "Pizza Margherita", 9.99, "Pizza"));
@@ -31,6 +37,7 @@ public class MenuItemsController {
         addMenuItem(new MenuItems("D1", "Cola", 1.99, "Drink"));
         addMenuItem(new MenuItems("D2", "Water", 0.99, "Drink"));
     }
+    
     
     public List<MenuItems> getAllMenuItems() {
         return new ArrayList<>(menuItemsList);
@@ -43,10 +50,7 @@ public class MenuItemsController {
         return false;
     }
     
-    /**
-     * Get menu item by ID
-     * Similar to MenuItems.objects.get(itemId=id) in Django
-     */
+    //Get menu item by ID
     public MenuItems getMenuItemById(String itemId) {
         return menuItemsList.stream()
                 .filter(item -> item.getItemId().equals(itemId))
@@ -54,10 +58,8 @@ public class MenuItemsController {
                 .orElse(null);
     }
     
-    /**
-     * Update menu item
-     * Similar to item = MenuItems.objects.get(itemId=id); item.name = ...; item.save()
-     */
+    //Update menu item
+
     public boolean updateMenuItem(String itemId, String name, double price, String category) {
         MenuItems item = getMenuItemById(itemId);
         if (item != null) {
@@ -69,10 +71,8 @@ public class MenuItemsController {
         return false;
     }
     
-    /**
-     * Delete menu item
-     * Similar to MenuItems.objects.get(itemId=id).delete() in Django
-     */
+    //Delete menu item
+
     public boolean deleteMenuItem(String itemId) {
         MenuItems item = getMenuItemById(itemId);
         if (item != null) {
@@ -81,10 +81,7 @@ public class MenuItemsController {
         return false;
     }
     
-    /**
-     * Check if menu item exists
-     * Similar to MenuItems.objects.filter(itemId=id).exists() in Django
-     */
+    //Check if menu item exists
     public boolean menuItemExists(String itemId) {
         return menuItemsList.stream()
                 .anyMatch(item -> item.getItemId().equals(itemId));

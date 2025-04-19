@@ -9,11 +9,7 @@ import java.util.UUID;
 import com.fooddeliverysystem.model.MenuItems;
 import com.fooddeliverysystem.model.Order;
 
-/**
- * OrderController handles operations related to customer orders.
- * Similar to Django views, this controller processes requests related to orders
- * but doesn't render templates (JavaFX handles the view separately).
- */
+// OrderController handles operations related to customer orders.
 public class OrderController {
     
     // In-memory storage of orders (similar to Django's ORM but in memory)
@@ -31,10 +27,7 @@ public class OrderController {
     // Current active order (similar to session-based cart in Django)
     private Order currentOrder;
     
-    /**
-     * Private constructor
-     * In Django, views are instantiated by the framework
-     */
+    //Private constructor
     private OrderController() {
         orders = new HashMap<>();
         menuItemsController = MenuItemsController.getInstance();
@@ -42,10 +35,7 @@ public class OrderController {
         initializeCurrentOrder();
     }
     
-    /**
-     * Get singleton instance
-     * In Django, you wouldn't need this as views are instantiated by the framework
-     */
+    //Get singleton instance
     public static OrderController getInstance() {
         if (instance == null) {
             instance = new OrderController();
@@ -53,26 +43,17 @@ public class OrderController {
         return instance;
     }
     
-    /**
-     * Initialize a new current order
-     * Similar to creating a new cart in Django session
-     */
+    //Initialize a new current order
     public void initializeCurrentOrder() {
         currentOrder = new Order();
     }
     
-    /**
-     * Get the current active order
-     * Similar to getting the cart from session in Django
-     */
+    //Get the current active order
     public Order getCurrentOrder() {
         return currentOrder;
     }
     
-    /**
-     * Add item to current order
-     * Similar to adding an item to cart in Django
-     */
+    //Add item to current order
     public void addItemToCurrentOrder(String menuItemId) {
         MenuItems item = menuItemsController.getMenuItemById(menuItemId);
         if (item != null) {
@@ -80,10 +61,7 @@ public class OrderController {
         }
     }
     
-    /**
-     * Remove item from current order
-     * Similar to removing an item from cart in Django
-     */
+    //Remove item from current order
     public boolean removeItemFromCurrentOrder(String menuItemId) {
         MenuItems item = menuItemsController.getMenuItemById(menuItemId);
         if (item != null) {
@@ -92,11 +70,7 @@ public class OrderController {
         return false;
     }
     
-    /**
-     * Submit the current order
-     * Similar to checkout process in Django
-     * return orderId of the submitted order
-     */
+    //Submit the current order
     public String submitOrder() {
         if (currentOrder.getOrderItems().isEmpty()) {
             return null;
@@ -115,59 +89,39 @@ public class OrderController {
         return orderId;
     }
     
-    /**
-     * Generate a unique order ID
-     * Similar to using UUID in Django models
-     */
+    //Generate a unique order ID
     private String generateOrderId() {
         return UUID.randomUUID().toString();
     }
     
-    /**
-     * Get an order by its ID
-     * Similar to Order.objects.get(id=orderId) in Django
-     */
+    //Get an order by its ID
     public Order getOrder(String orderId) {
         return orders.get(orderId);
     }
     
-    /**
-     * Get all orders
-     * Similar to Order.objects.all() in Django
-     */
+    //Get all orders
     public List<Order> getAllOrders() {
         return new ArrayList<>(orders.values());
     }
     
-    /**
-     * Update customer information in the current order
-     * Similar to updating form data in Django
-     */
+    //Update customer information in the current order
     public void updateCustomerInfo(String name, String address, String phone) {
         currentOrder.setCustomerName(name);
         currentOrder.setCustomerAddress(address);
         currentOrder.setCustomerPhone(phone);
     }
     
-    /**
-     * Cancel the current order
-     * Similar to clearing the cart in Django
-     */
+    //Cancel the current order
     public void cancelCurrentOrder() {
         currentOrder.cancelOrder();
     }
     
-    /**
-     * Get the total price of the current order
-     * Similar to calculating cart total in Django
-     */
+    //Get the total price of the current order
     public double getCurrentOrderTotal() {
         return currentOrder.getTotalPrice();
     }
     
-    /**
-     * Update order status
-     */
+    //Update order status
     public boolean updateOrderStatus(String orderId, String status) {
         Order order = getOrder(orderId);
         if (order != null) {
@@ -177,9 +131,7 @@ public class OrderController {
         return false;
     }
     
-    /**
-     * Get the total sales for today
-     */
+    //Get the total sales for today
     public double getTodayTotalSales() {
         return salesController.getTodaySales();
     }
