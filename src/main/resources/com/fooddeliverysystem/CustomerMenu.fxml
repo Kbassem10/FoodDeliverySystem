@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url(&quot;menuserviseimage.jpg&quot;); -fx-background-size: cover; -fx-background-position: center center;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fooddeliverysystem.CustomerMenuController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url(&quot;menuserviseimage.jpg&quot;); -fx-background-color: black; -fx-background-size: cover; -fx-background-position: center center;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fooddeliverysystem.CustomerMenuController">
    <children>
       <Button layoutX="12.0" layoutY="98.0" mnemonicParsing="false" onAction="#switchToViewMenu" style="-fx-background-color: colorless;" text="View Restaurant Menu" textFill="WHITE" />
       <Button layoutX="184.0" layoutY="98.0" mnemonicParsing="false" onAction="#switchToPlaceOrder" style="-fx-background-color: colorless;" text="Place an order" textFill="WHITE" />
