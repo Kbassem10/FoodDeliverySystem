@@ -7,12 +7,12 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url(&quot;menuserviseimage.jpg&quot;); -fx-background-size: cover; -fx-background-position: center center;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fooddeliverysystem.CustomerMenuController">
    <children>
-      <Button layoutX="24.0" layoutY="80.0" mnemonicParsing="false" onAction="#switchToViewMenu" text="View Restaurant Menu" />
-      <Button layoutX="24.0" layoutY="135.0" mnemonicParsing="false" onAction="#switchToPlaceOrder" text="Place an order" />
-      <Button layoutX="24.0" layoutY="188.0" mnemonicParsing="false" onAction="#switchToCancelOrder" text="Cancel an Order" />
-      <Button layoutX="24.0" layoutY="242.0" mnemonicParsing="false" onAction="#switchToViewOrderStatus" text="View Order Status" />
-      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchToMainMenu" text="Back to Main Menu" />
-      <Label layoutX="136.0" layoutY="39.0" text="HellHound Customers Menu">
+      <Button layoutX="12.0" layoutY="98.0" mnemonicParsing="false" onAction="#switchToViewMenu" style="-fx-background-color: black;" text="View Restaurant Menu" textFill="WHITE" />
+      <Button layoutX="184.0" layoutY="98.0" mnemonicParsing="false" onAction="#switchToPlaceOrder" style="-fx-background-color: black;" text="Place an order" textFill="WHITE" />
+      <Button layoutX="315.0" layoutY="98.0" mnemonicParsing="false" onAction="#switchToCancelOrder" style="-fx-background-color: black;" text="Cancel an Order" textFill="WHITE" />
+      <Button layoutX="457.0" layoutY="98.0" mnemonicParsing="false" onAction="#switchToViewOrderStatus" style="-fx-background-color: black;" text="View Order Status" textFill="WHITE" />
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchToMainMenu" style="-fx-background-color: black;" text="Back to Main Menu" textFill="WHITE" />
+      <Label layoutX="136.0" layoutY="39.0" text="HellHound Customers Menu" textFill="WHITE">
          <font>
             <Font name="System Bold" size="26.0" />
          </font>
