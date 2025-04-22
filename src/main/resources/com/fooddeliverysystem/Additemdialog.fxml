@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url('C:\Users\clinc\Documents\GitHub\FoodDeliverySystem\src\main\resources'); -fx-background-size: cover; -fx-background-repeat: no-repeat; -fx-background-position: center;" styleClass="background" stylesheets="@../../../../../stylesheet/sample.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fooddeliverysystem.AdditemdialogController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url('C:\Users\clinc\Documents\GitHub\FoodDeliverySystem\src\main\resources'); -fx-background-color: #2c292e; -fx-background-size: cover; -fx-background-repeat: no-repeat; -fx-background-position: center;" styleClass="background" stylesheets="@../../../../../stylesheet/sample.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fooddeliverysystem.AdditemdialogController">
    <children>
       <TextField fx:id="ItemID" layoutX="33.0" layoutY="75.0" promptText="Enter Item ID" stylesheets="@../../../../../stylesheet/sample.css">
          <opaqueInsets>
@@ -19,13 +19,13 @@
       <TextField fx:id="ItemCategory" layoutX="33.0" layoutY="231.0" promptText="Enter Item Category" />
       <TextField fx:id="ItemPrice" layoutX="33.0" layoutY="179.0" promptText="Enter Item Price" />
       <Label alignment="CENTER" layoutX="34.0" layoutY="47.0" prefHeight="18.0" prefWidth="150.0" text="Adding item" textAlignment="CENTER" />
-      <Button layoutX="33.0" layoutY="266.0" mnemonicParsing="false" onAction="#addItem" text="Confirm" />
-      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchToAdminMenu" text="Back">
+      <Button layoutX="33.0" layoutY="266.0" mnemonicParsing="false" onAction="#addItem" style="-fx-background-color: orange;" text="Confirm" />
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchToAdminMenu" style="-fx-background-color: orange;" text="Back">
          <font>
             <Font name="System Italic" size="12.0" />
          </font></Button>
       <Label fx:id="statusLabel" layoutX="200.0" layoutY="320.0" prefWidth="300.0" text="" />
-      <ImageView fitHeight="400.0" fitWidth="372.0" layoutX="229.0" layoutY="-1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <ImageView fitHeight="400.0" fitWidth="372.0" layoutX="229.0" layoutY="-1.0" nodeOrientation="INHERIT" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <image>
             <Image url="@../../backgroundimage.jpeg" />
          </image>
