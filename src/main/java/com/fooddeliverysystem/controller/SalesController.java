@@ -33,6 +33,16 @@ public class SalesController {
         dailySales.put(today, currentSales + order.getTotalPrice());
     }
     
+    // Cancel a sale for a specific order (subtracts from the correct date)
+    public void cancelSale(Order order) {
+        if (order == null) return;
+        LocalDate date = order.getOrderTime().toLocalDate();
+        double currentSales = dailySales.getOrDefault(date, 0.0);
+        double newSales = currentSales - order.getTotalPrice();
+        if (newSales < 0) newSales = 0.0;
+        dailySales.put(date, newSales);
+    }
+
     //Get the total sales for today
     public double getTodaySales() {
         LocalDate today = LocalDate.now();

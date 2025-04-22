@@ -25,8 +25,7 @@ public class AdminMenuController {
     }
 
     @FXML
-    private void viewTotalSales() {
-        System.out.println("View Total Sales button clicked!");
-        // Add logic to display total sales
+    private void viewTotalSales() throws IOException {
+        App.setRoot("ViewTotalSales");
     }
 }

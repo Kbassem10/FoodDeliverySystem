@@ -17,8 +17,7 @@ public class SuccessController {
 
     @FXML
     private void goToCustomerMenu() throws IOException {
-        // Implement this if you have a customer menu
-        // App.setRoot("CustomerMenu");
+        App.setRoot("CustomerMenu");
     }
 
     @FXML

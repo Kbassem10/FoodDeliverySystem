@@ -23,6 +23,7 @@ public class OrderController {
     
     // Singleton instance
     private static OrderController instance;
+    private static int nextOrderId = 1; // Static counter for order IDs
     
     // Current active order (similar to session-based cart in Django)
     private Order currentOrder;
@@ -72,11 +73,12 @@ public class OrderController {
     
     //Submit the current order
     public String submitOrder() {
-        if (currentOrder.getOrderItems().isEmpty()) {
+        if (currentOrder == null || currentOrder.getOrderItems().isEmpty()) {
             return null;
         }
         
-        String orderId = generateOrderId();
+        String orderId = String.valueOf(nextOrderId++); // Assign and increment
+        currentOrder.setOrderId(orderId);
         currentOrder.setOrderStatus("Confirmed");
         orders.put(orderId, currentOrder);
         
@@ -89,10 +91,6 @@ public class OrderController {
         return orderId;
     }
     
-    //Generate a unique order ID
-    private String generateOrderId() {
-        return UUID.randomUUID().toString();
-    }
     
     //Get an order by its ID
     public Order getOrder(String orderId) {

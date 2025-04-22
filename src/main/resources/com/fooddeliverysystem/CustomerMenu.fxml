@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fooddeliverysystem.CustomerMenuController">
+   <children>
+      <Button layoutX="114.0" layoutY="79.0" mnemonicParsing="false" onAction="#switchToViewMenu" text="View Restaurant Menu" />
+      <Button layoutX="114.0" layoutY="132.0" mnemonicParsing="false" onAction="#switchToPlaceOrder" text="Place an order" />
+      <Button layoutX="114.0" layoutY="175.0" mnemonicParsing="false" onAction="#switchToCancelOrder" text="Cancel an Order" />
+      <Button layoutX="114.0" layoutY="219.0" mnemonicParsing="false" onAction="#switchToViewOrderStatus" text="View Order Status" />
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchToMainMenu" text="Back to Main Menu" />
+      <Label layoutX="127.0" layoutY="23.0" text="HellHound Customers Menu">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

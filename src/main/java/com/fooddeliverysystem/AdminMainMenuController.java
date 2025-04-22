@@ -15,7 +15,7 @@ public class AdminMainMenuController {
 
     @FXML
     private void switchToMainMenu() throws IOException {
-        App.setRoot("MainMenu"); // Updated reference
+        App.setRoot("MainMenu");
     }
 
     @FXML
@@ -25,7 +25,7 @@ public class AdminMainMenuController {
         if ("1234".equals(enteredPassword)) {
             statusLabel.setText("Access Granted!");
             statusLabel.setStyle("-fx-text-fill: green;");
-            App.setRoot("AdminMenu"); // Ensure "AdminMenu.fxml" exists in the correct location
+            App.setRoot("AdminMenu");
         } else {
             statusLabel.setText("Invalid Password!");
             statusLabel.setStyle("-fx-text-fill: red;");

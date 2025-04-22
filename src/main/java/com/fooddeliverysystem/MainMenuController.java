@@ -7,12 +7,26 @@ public class MainMenuController {
 
     @FXML
     private void switchToAdminMainMenu() throws IOException {
-        App.setRoot("AdminMainMenu"); // Updated reference
+        App.setRoot("AdminMainMenu");
     }
 
     @FXML
     private void switchToCustomerMenu() throws IOException {
-        // TODO: Implement customer menu navigation
-        // App.setRoot("CustomerMenu");
+        App.setRoot("CustomerMenu");
+    }
+
+    @FXML
+    private void handleCustomerLogin() throws IOException {
+        App.setRoot("CustomerMenu");
+    }
+
+    @FXML
+    private void handleAdminLogin() throws IOException {
+        App.setRoot("AdminMainMenu");
+    }
+
+    @FXML
+    private void handleExit() {
+        System.exit(0);
     }
 }

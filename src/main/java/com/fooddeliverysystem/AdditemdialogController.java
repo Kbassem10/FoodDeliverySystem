@@ -17,7 +17,7 @@ public class AdditemdialogController {
     @FXML
     private TextField ItemPrice;
     @FXML
-    private Label statusLabel; // Add this to your FXML for feedback
+    private Label statusLabel;
 
     private MenuItemsController menuController = MenuItemsController.getInstance();
 
@@ -49,6 +49,8 @@ public class AdditemdialogController {
         boolean added = menuController.addMenuItem(newItem);
         if (statusLabel != null) {
             if (added) {
+
+                ViewMenuController.menuData.add(newItem);
                 try {
                     System.out.println("Item added successfully: " + newItem);
                     switchtoSuccess();

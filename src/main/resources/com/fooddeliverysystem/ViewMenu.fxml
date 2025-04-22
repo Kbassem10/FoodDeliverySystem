@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fooddeliverysystem.ViewMenuController">
+   <children>
+      <Label layoutX="200.0" layoutY="20.0" text="Restaurant Menu">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="menuTable" layoutX="50.0" layoutY="70.0" prefHeight="250.0" prefWidth="500.0">
+         <columns>
+            <TableColumn fx:id="nameColumn" prefWidth="200.0" text="Item Name" />
+            <TableColumn fx:id="priceColumn" prefWidth="150.0" text="Price" />
+            <TableColumn fx:id="descColumn" prefWidth="150.0" text="Description" />
+         </columns>
+      </TableView>
+      <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" text="Back" onAction="#handleBack"/>
+   </children>
+</AnchorPane>

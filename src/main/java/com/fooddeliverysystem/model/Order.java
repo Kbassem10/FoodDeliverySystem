@@ -20,6 +20,8 @@ public class Order {
     private String orderStatus;
     private LocalDateTime orderTime;
     
+    private String orderId; // <-- Add this line
+    
     // parametrized constructor
     public Order(String customerName, String customerAddress, String customerPhone) {
         this.orderItems = new ArrayList<>();
@@ -127,5 +129,13 @@ public class Order {
     
     public LocalDateTime getOrderTime() {
         return orderTime;
+    }
+    
+    public String getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(String orderId) {
+        this.orderId = orderId;
     }
 }
