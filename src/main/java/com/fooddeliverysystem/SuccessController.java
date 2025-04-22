@@ -12,7 +12,7 @@ public class SuccessController {
 
     @FXML
     private void goToAdminMenu() throws IOException {
-        App.setRoot("AdminMenu");
+        App.setRoot("AdminMainMenu");
     }
 
     @FXML

@@ -20,9 +20,8 @@ public class AdminMenuController {
     }
 
     @FXML
-    private void removeItem() {
-        System.out.println("Remove Item button clicked!");
-        // Add logic to handle removing items
+    private void switchToRemoveItemDialog() throws IOException {
+        App.setRoot("RemoveItemDialog"); 
     }
 
     @FXML
