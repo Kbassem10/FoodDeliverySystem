@@ -1,28 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fooddeliverysystem.PlaceOrderController">
-   <children>
-      <Label layoutX="200.0" layoutY="30.0" text="Place an Order">
+<BorderPane prefHeight="550.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fooddeliverysystem.PlaceOrderController">
+   <top>
+      <Label text="Place Order" BorderPane.alignment="CENTER">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
+         <BorderPane.margin>
+            <Insets bottom="10.0" top="20.0" />
+         </BorderPane.margin>
       </Label>
-      <Label layoutX="100.0" layoutY="100.0" text="Menu Item:" />
-      <ComboBox fx:id="menuItemComboBox" layoutX="200.0" layoutY="95.0" prefWidth="200.0" />
-      <Label layoutX="100.0" layoutY="150.0" text="Quantity:" />
-      <Spinner fx:id="quantitySpinner" layoutX="200.0" layoutY="145.0" prefWidth="80.0" />
-      <Label layoutX="100.0" layoutY="200.0" text="Special Instructions:" />
-      <TextField fx:id="instructionsField" layoutX="250.0" layoutY="195.0" prefWidth="200.0" />
-      <Button layoutX="200.0" layoutY="260.0" mnemonicParsing="false" text="Place Order" onAction="#handlePlaceOrder"/>
-      <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" text="Back" onAction="#handleBack"/>
-      <Label fx:id="statusLabel" layoutX="200.0" layoutY="320.0" text="" />
-   </children>
-</AnchorPane>
+   </top>
+   <center>
+      <VBox prefHeight="400.0" prefWidth="600.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <Label text="Select Menu Item:" />
+                  <ComboBox fx:id="menuItemComboBox" prefHeight="25.0" prefWidth="339.0" promptText="Choose an item" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <Label text="Quantity:" />
+                  <Spinner fx:id="quantitySpinner" prefHeight="25.0" prefWidth="127.0" />
+                  <Button fx:id="addItemButton" mnemonicParsing="false" onAction="#handleAddToCart" prefHeight="25.0" prefWidth="130.0" text="Add to Cart" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <Label text="Special Instructions:" />
+                  <TextField fx:id="instructionsField" prefHeight="25.0" prefWidth="339.0" />
+               </children>
+            </HBox>
+            <Separator />
+            <Label text="Your Cart:" />
+            
+            <!-- Replace ListView with TableView -->
+            <TableView fx:id="cartTableView" prefHeight="150.0" prefWidth="600.0">
+              <columns>
+                <TableColumn fx:id="quantityColumn" prefWidth="75.0" text="Quantity" />
+                <TableColumn fx:id="itemNameColumn" prefWidth="200.0" text="Item Name" />
+                <TableColumn fx:id="itemPriceColumn" prefWidth="100.0" text="Price" />
+                <TableColumn fx:id="itemTotalColumn" prefWidth="100.0" text="Total" />
+                <TableColumn fx:id="actionColumn" prefWidth="100.0" text="Action" />
+              </columns>
+            </TableView>
+            
+            <HBox alignment="CENTER_RIGHT" spacing="10.0">
+               <children>
+                  <Label fx:id="totalPriceLabel" text="Total: $0.00">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <Separator />
+            <Label text="Customer Information:">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <Label prefWidth="100.0" text="Name:" />
+                  <TextField fx:id="customerNameField" prefHeight="25.0" prefWidth="339.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <Label prefWidth="100.0" text="Address:" />
+                  <TextField fx:id="customerAddressField" prefHeight="25.0" prefWidth="339.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <Label prefWidth="100.0" text="Phone:" />
+                  <TextField fx:id="customerPhoneField" prefHeight="25.0" prefWidth="339.0" />
+               </children>
+            </HBox>
+            <Label fx:id="statusLabel" alignment="CENTER" prefHeight="20.0" prefWidth="700.0" textFill="#277d29">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <BorderPane.margin>
+            <Insets left="20.0" right="20.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="70.0" prefWidth="600.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="back" mnemonicParsing="false" onAction="#handleBack" prefHeight="35.0" prefWidth="150.0" text="Back to Menu" />
+            <Button fx:id="placeOrderButton" mnemonicParsing="false" onAction="#handlePlaceOrder" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #277d29;" text="Place Order" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
