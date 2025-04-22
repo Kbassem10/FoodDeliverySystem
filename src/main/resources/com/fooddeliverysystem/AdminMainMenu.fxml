@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="201.0" prefWidth="481.0" style="-fx-background-image: url(&quot;loginimage2.jpg&quot;); -fx-background-repeat: no-repeat; -fx-background-size: 75% 100%; -fx-background-position: center; -fx-background-color: #2c292e;" stylesheets="@../../sheet.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fooddeliverysystem.AdminMainMenuController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="201.0" prefWidth="481.0" style="-fx-background-image: url(&quot;loginimage2.jpg&quot;); -fx-background-repeat: no-repeat; -fx-background-size: 50% 100%; -fx-background-position: 50% 100%; -fx-background-color: #2c292e;" stylesheets="@../../sheet.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fooddeliverysystem.AdminMainMenuController">
    <children>
       <Label alignment="CENTER" layoutX="-5.0" layoutY="48.0" prefHeight="42.0" prefWidth="212.0" text="Admin Login" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_WORD_ELLIPSIS">
          <font>
