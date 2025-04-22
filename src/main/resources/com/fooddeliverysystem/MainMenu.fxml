@@ -12,8 +12,8 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Button layoutX="170.0" layoutY="100.0" mnemonicParsing="false" onAction="#handleCustomerLogin" text="Customer Login" />
-      <Button layoutX="170.0" layoutY="150.0" mnemonicParsing="false" onAction="#handleAdminLogin" text="Admin Login" />
+      <Button layoutX="170.0" layoutY="100.0" mnemonicParsing="false" onAction="#handleCustomerLogin" style="-fx-background-color: colorless;" text="Customer Login" />
+      <Button layoutX="170.0" layoutY="150.0" mnemonicParsing="false" onAction="#handleAdminLogin" style="-fx-background-image: white;" text="Admin Login" />
       <Button layoutX="170.0" layoutY="200.0" mnemonicParsing="false" onAction="#handleExit" text="Exit" />
    </children>
 </AnchorPane>
