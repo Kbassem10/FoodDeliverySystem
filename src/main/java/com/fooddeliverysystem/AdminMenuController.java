@@ -6,20 +6,17 @@ import javafx.fxml.FXML;
 public class AdminMenuController {
 
     @FXML
-    private void switchToMainMenu() throws IOException { // Updated method name for clarity
-        App.setRoot("MainMenu"); // Updated reference
+    private void switchToMainMenu() throws IOException { 
+        App.setRoot("MainMenu"); 
     }
-
     @FXML
-    private void addItem() {
-        System.out.println("Add Item button clicked!");
-        // Add logic to handle adding items
+    private void switchToAddItemDialog() throws IOException { 
+        App.setRoot("Additemdialog"); 
     }
-
+    
     @FXML
-    private void editItem() {
-        System.out.println("Edit Item button clicked!");
-        // Add logic to handle editing items
+    private void switchToEditItemDialog() throws IOException { 
+        App.setRoot("EditItemDialog"); 
     }
 
     @FXML

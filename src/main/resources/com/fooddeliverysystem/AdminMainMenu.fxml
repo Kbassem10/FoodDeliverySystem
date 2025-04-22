@@ -13,9 +13,9 @@
             <Font name="Arial Black" size="18.0" />
          </font>
       </Label>
-      <PasswordField fx:id="passwordField" layoutX="100.0" layoutY="100.0" />
-      <Button layoutX="100.0" layoutY="150.0" text="Login" onAction="#checkPassword" />
+      <PasswordField fx:id="passwordField" layoutX="157.0" layoutY="83.0" promptText="Enter Password" />
+      <Button layoutX="195.0" layoutY="124.0" onAction="#checkPassword" text="Login" />
       <Label fx:id="statusLabel" layoutX="100.0" layoutY="200.0" />
-      <Button layoutX="10.0" layoutY="10.0" text="Back" onAction="#switchToMainMenu" />
+      <Button layoutX="10.0" layoutY="10.0" onAction="#switchToMainMenu" text="Back" />
    </children>
 </AnchorPane>

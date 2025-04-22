@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fooddeliverysystem.AdditemdialogController">
+   <children>
+      <TextField fx:id="ItemID" layoutX="33.0" layoutY="75.0" promptText="Enter Item ID" />
+      <TextField fx:id="ItemName" layoutX="33.0" layoutY="127.0" promptText="Enter Item Name" />
+      <TextField fx:id="ItemCategory" layoutX="33.0" layoutY="231.0" promptText="Enter Item Category" />
+      <TextField fx:id="ItemPrice" layoutX="33.0" layoutY="179.0" promptText="Enter Item Price" />
+      <Label alignment="CENTER" layoutX="34.0" layoutY="47.0" prefHeight="18.0" prefWidth="150.0" text="Adding item" textAlignment="CENTER" />
+      <Button layoutX="33.0" layoutY="266.0" mnemonicParsing="false" text="Confirm" onAction="#addItem" />
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchToAdminMenu" text="Back" />
+      <Label fx:id="statusLabel" layoutX="200.0" layoutY="320.0" prefWidth="300.0" text="" />
+   </children>
+</AnchorPane>

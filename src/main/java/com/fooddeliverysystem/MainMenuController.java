@@ -9,4 +9,10 @@ public class MainMenuController {
     private void switchToAdminMainMenu() throws IOException {
         App.setRoot("AdminMainMenu"); // Updated reference
     }
+
+    @FXML
+    private void switchToCustomerMenu() throws IOException {
+        // TODO: Implement customer menu navigation
+        // App.setRoot("CustomerMenu");
+    }
 }
