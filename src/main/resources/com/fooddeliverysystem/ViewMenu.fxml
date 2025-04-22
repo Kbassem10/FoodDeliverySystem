@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url(&quot;restmenu.jpg&quot;); -fx-background-size: 50% 100%; -fx-background-repeat: no-repeat; -fx-background-position: right center; -fx-background-image: url(&quot;menu2.jpg&quot;); -fx-background-position: left center; -fx-background-size: 50% 100%;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fooddeliverysystem.ViewMenuController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url(&quot;restmenu.jpg&quot;), url(&quot;menu2.jpg&quot;); -fx-background-size: 50% 100% , 50% 100%; -fx-background-repeat: no-repeat; -fx-background-position: right center , left center;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fooddeliverysystem.ViewMenuController">
    <children>
       <Label layoutX="41.0" prefHeight="49.0" prefWidth="202.0" text="Restaurant Menu">
          <font>
