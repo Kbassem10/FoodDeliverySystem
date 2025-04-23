@@ -14,10 +14,10 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <TableView fx:id="menuTable" layoutY="49.0" prefHeight="248.0" prefWidth="314.0" style="-fx-background-position: center left; -fx-background-size: 50% 100%;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+      <TableView fx:id="menuTable" layoutY="49.0" prefHeight="305.0" prefWidth="314.0" style="-fx-background-position: center left; -fx-background-size: 50% 100%;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
          <columns>
             <TableColumn fx:id="nameColumn" prefWidth="79.0" text="Item Name" />
-            <TableColumn fx:id="priceColumn" prefWidth="103.0" style="-fx-background-color: black; -fx-text-color: orange;" text="Price" />
+            <TableColumn fx:id="priceColumn" prefWidth="103.0" style="-fx-background-color: black; -fx-text-fill: orange;" text="Price" />
             <TableColumn fx:id="descColumn" prefWidth="126.0" text="Description" />
          </columns>
       </TableView>
