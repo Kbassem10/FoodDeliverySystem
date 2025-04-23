@@ -16,9 +16,9 @@
       </Label>
       <TableView fx:id="menuTable" layoutY="104.0" prefHeight="296.0" prefWidth="320.0" style="-fx-background-position: center left; -fx-background-size: 50% 100%;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="75.0">
          <columns>
-            <TableColumn fx:id="nameColumn" prefWidth="79.0" text="Item Name" />
-            <TableColumn fx:id="priceColumn" prefWidth="103.0" style="-fx-background-color: d0cd81; -fx-text-fill: black;" text="Price" />
-            <TableColumn fx:id="descColumn" prefWidth="131.0" text="Description" />
+            <TableColumn fx:id="nameColumn" prefWidth="87.0" style="-fx-background-color: #87a732;" text="Item Name" />
+            <TableColumn fx:id="priceColumn" prefWidth="95.0" style="-fx-background-color: d0cd81; -fx-text-fill: black;" text="Price" />
+            <TableColumn fx:id="descColumn" prefWidth="137.0" style="-fx-background-color: #87a732;" text="Description" />
          </columns>
       </TableView>
       <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="49.0" prefWidth="41.0" style="-fx-background-color: grey;" text="Back" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
