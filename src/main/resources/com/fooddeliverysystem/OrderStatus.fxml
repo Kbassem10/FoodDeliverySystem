@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fooddeliverysystem.OrderStatusController">
+<AnchorPane prefHeight="300.0" prefWidth="500.0" style="-fx-background-image: url(&quot;srrynadeem.jpg&quot;);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fooddeliverysystem.OrderStatusController">
    <children>
       <Label layoutX="150.0" layoutY="20.0" text="View Order Status">
          <font>
@@ -15,8 +15,8 @@
       </Label>
       <Label layoutX="60.0" layoutY="90.0" text="Order ID:" />
       <TextField fx:id="orderIdField" layoutX="160.0" layoutY="85.0" prefWidth="200.0" />
-      <Button layoutX="160.0" layoutY="140.0" mnemonicParsing="false" text="Check Status" onAction="#handleCheckStatus"/>
-      <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" text="Back" onAction="#handleBack"/>
+      <Button layoutX="160.0" layoutY="140.0" mnemonicParsing="false" onAction="#handleCheckStatus" text="Check Status" />
+      <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" onAction="#handleBack" text="Back" />
       <Label fx:id="statusLabel" layoutX="160.0" layoutY="200.0" text="" />
    </children>
 </AnchorPane>
