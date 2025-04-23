@@ -6,17 +6,17 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="300.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fooddeliverysystem.OrderStatusController">
+<AnchorPane prefHeight="300.0" prefWidth="500.0" style="-fx-background-image: url(&quot;order2.jpg&quot;); -fx-background-color: red; -fx-background-position: center center; -fx-background-size: cover; -fx-background-repeat: no-repeat;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fooddeliverysystem.OrderStatusController">
    <children>
-      <Label layoutX="150.0" layoutY="20.0" text="View Order Status">
+      <Label layoutX="81.0" layoutY="17.0" text="View Order Status">
          <font>
             <Font name="System Bold" size="22.0" />
          </font>
       </Label>
-      <Label layoutX="60.0" layoutY="90.0" text="Order ID:" />
-      <TextField fx:id="orderIdField" layoutX="160.0" layoutY="85.0" prefWidth="200.0" />
-      <Button layoutX="160.0" layoutY="140.0" mnemonicParsing="false" text="Check Status" onAction="#handleCheckStatus"/>
-      <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" text="Back" onAction="#handleBack"/>
+      <Label layoutX="16.0" layoutY="89.0" text="Order ID:" />
+      <TextField fx:id="orderIdField" layoutX="74.0" layoutY="85.0" prefWidth="200.0" />
+      <Button layoutX="32.0" layoutY="175.0" mnemonicParsing="false" onAction="#handleCheckStatus" text="Check Status" />
+      <Button layoutX="20.0" layoutY="20.0" mnemonicParsing="false" onAction="#handleBack" text="Back" />
       <Label fx:id="statusLabel" layoutX="160.0" layoutY="200.0" text="" />
    </children>
 </AnchorPane>
