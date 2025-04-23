@@ -8,7 +8,7 @@
 
 <AnchorPane prefHeight="300.0" prefWidth="500.0" style="-fx-background-image: url(&quot;order.jpg&quot;); -fx-background-size: cover; -fx-background-position: center center; -fx-background-repeat: no-repeat;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fooddeliverysystem.OrderStatusController">
    <children>
-      <Label layoutX="80.0" layoutY="17.0" text="View Order Status">
+      <Label layoutX="149.0" layoutY="201.0" text="View Order Status">
          <font>
             <Font name="System Bold" size="22.0" />
          </font>
