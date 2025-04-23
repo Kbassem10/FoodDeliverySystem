@@ -5,17 +5,32 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fooddeliverysystem.AdminMenuController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url(&quot;adminmenuu.jpeg&quot;); -fx-background-color: black; -fx-background-size: cover; -fx-background-position: center center; -fx-background-repeat: no-repeat;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fooddeliverysystem.AdminMenuController">
    <children>
-      <Button layoutX="54.0" layoutY="92.0" mnemonicParsing="false" onAction="#switchToAddItemDialog" prefHeight="35.0" prefWidth="128.0" text="Add Item" />
-      <Label layoutX="226.0" layoutY="25.0" text="Admin Menu">
+      <Button layoutX="54.0" layoutY="92.0" mnemonicParsing="false" onAction="#switchToAddItemDialog" prefHeight="35.0" prefWidth="128.0" style="-fx-background-color: colorless;" text="Add Item" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Label layoutX="226.0" layoutY="25.0" text="Admin Menu" textFill="WHITE">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Button layoutX="54.0" layoutY="137.0" mnemonicParsing="false" onAction="#switchToEditItemDialog" prefHeight="35.0" prefWidth="128.0" text="Edit Item" />
-      <Button layoutX="54.0" layoutY="182.0" mnemonicParsing="false" onAction="#switchToRemoveItemDialog" prefHeight="35.0" prefWidth="128.0" text="Remove Item" />
-      <Button layoutX="54.0" layoutY="230.0" mnemonicParsing="false" onAction="#viewTotalSales" prefHeight="35.0" prefWidth="128.0" text="View total sales" />
-      <Button layoutX="14.0" layoutY="12.0" mnemonicParsing="false" onAction="#switchToMainMenu" text="Back" />
+      <Button layoutX="54.0" layoutY="137.0" mnemonicParsing="false" onAction="#switchToEditItemDialog" prefHeight="35.0" prefWidth="128.0" style="-fx-background-color: colorless;" text="Edit Item" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button layoutX="54.0" layoutY="182.0" mnemonicParsing="false" onAction="#switchToRemoveItemDialog" prefHeight="39.0" prefWidth="139.0" style="-fx-background-color: colorless;" text="Remove Item" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button layoutX="54.0" layoutY="230.0" mnemonicParsing="false" onAction="#viewTotalSales" prefHeight="39.0" prefWidth="153.0" style="-fx-background-color: colorless;" text="View total sales" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Button layoutX="14.0" layoutY="12.0" mnemonicParsing="false" onAction="#switchToMainMenu" style="-fx-background-color: colorless;" text="Back" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
    </children>
 </AnchorPane>
