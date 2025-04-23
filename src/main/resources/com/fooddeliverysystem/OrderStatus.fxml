@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="300.0" prefWidth="500.0" style="-fx-background-image: url(&quot;order.jpg&quot;); -fx-background-color: red; -fx-background-position: center center; -fx-background-size: cover; -fx-background-repeat: no-repeat;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fooddeliverysystem.OrderStatusController">
+<AnchorPane prefHeight="300.0" prefWidth="500.0" style="-fx-background-image: url(&quot;order2.jpg&quot;); -fx-background-color: red; -fx-background-position: center center; -fx-background-size: cover; -fx-background-repeat: no-repeat;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fooddeliverysystem.OrderStatusController">
    <children>
       <Label layoutX="81.0" layoutY="17.0" text="View Order Status">
          <font>
