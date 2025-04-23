@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url(&quot;backgroundimage&quot;); -fx-background-color: #2c292e; -fx-background-size: 70% 100%; -fx-background-repeat: no-repeat; -fx-background-position: right center;" styleClass="background" stylesheets="@../../../../../stylesheet/sample.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fooddeliverysystem.AdditemdialogController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: url(&quot;backgroundimage.jpeg&quot;); -fx-background-color: #2c292e; -fx-background-size: 70% 100%; -fx-background-repeat: no-repeat; -fx-background-position: right center;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fooddeliverysystem.AdditemdialogController">
    <children>
       <TextField fx:id="ItemID" layoutX="33.0" layoutY="75.0" promptText="Enter Item ID" stylesheets="@../../../../../stylesheet/sample.css">
          <opaqueInsets>
@@ -16,7 +16,10 @@
       <TextField fx:id="ItemName" layoutX="33.0" layoutY="127.0" promptText="Enter Item Name" />
       <TextField fx:id="ItemCategory" layoutX="33.0" layoutY="231.0" promptText="Enter Item Category" />
       <TextField fx:id="ItemPrice" layoutX="33.0" layoutY="179.0" promptText="Enter Item Price" />
-      <Label alignment="CENTER" layoutX="34.0" layoutY="47.0" prefHeight="18.0" prefWidth="150.0" text="Adding item" textAlignment="CENTER" />
+      <Label alignment="CENTER" layoutX="34.0" layoutY="47.0" prefHeight="18.0" prefWidth="150.0" text="Adding item" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
       <Button layoutX="14.0" layoutY="277.0" mnemonicParsing="false" onAction="#addItem" style="-fx-background-color: orange;" text="Confirm" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="277.0" />
       <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchToAdminMenu" style="-fx-background-color: orange;" text="Back" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
          <font>
