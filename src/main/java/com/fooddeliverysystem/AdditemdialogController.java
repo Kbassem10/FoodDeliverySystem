@@ -38,32 +38,46 @@ public class AdditemdialogController {
         String name = ItemName.getText();
         String category = ItemCategory.getText();
         double price;
+
+        if (id.isEmpty() || name.isEmpty() || category.isEmpty()) {
+            statusLabel.setText("All fields are required!");
+            statusLabel.setStyle("-fx-text-fill: red;");
+            return;
+        }
+
         try {
             price = Double.parseDouble(ItemPrice.getText());
         } catch (NumberFormatException e) {
-            if (statusLabel != null) {
-                statusLabel.setText("Invalid price!");
-                statusLabel.setStyle("-fx-text-fill: red;");
-            }
+            statusLabel.setText("Invalid price!");
+            statusLabel.setStyle("-fx-text-fill: red;");
             return;
         }
-        MenuItems newItem = new MenuItems(id, name, price, category);
-        boolean added = menuController.addMenuItem(newItem);
-        if (statusLabel != null) {
-            if (added) {
 
-                ViewMenuController.menuData.add(newItem);
-                try {
-                    System.out.println("Item added successfully: " + newItem);
-                    switchtoSuccess();
-                } catch (IOException e) {
-                    statusLabel.setText("Error switching to success screen!");
-                    statusLabel.setStyle("-fx-text-fill: red;");
-                }
-            } else {
-                statusLabel.setText("Failed to add item (duplicate ID?)");
+        MenuItems newItem;
+
+        try {
+            newItem = new MenuItems(id, name, price, category);
+        } catch (ArithmeticException e) {
+            statusLabel.setText(e.getMessage());
+            statusLabel.setStyle("-fx-text-fill: red;");
+            return;
+        }
+
+        boolean added = menuController.addMenuItem(newItem);
+
+        if (added) {
+
+            ViewMenuController.menuData.add(newItem);
+            try {
+                System.out.println("Item added successfully: " + newItem);
+                switchtoSuccess();
+            } catch (IOException e) {
+                statusLabel.setText("Error switching to success screen!");
                 statusLabel.setStyle("-fx-text-fill: red;");
             }
+        } else {
+            statusLabel.setText("Failed to add item (duplicate ID?)");
+            statusLabel.setStyle("-fx-text-fill: red;");
         }
     }
 }

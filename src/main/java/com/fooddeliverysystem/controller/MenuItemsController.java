@@ -64,7 +64,11 @@ public class MenuItemsController {
         MenuItems item = getMenuItemById(itemId);
         if (item != null) {
             item.setName(name);
-            item.setPrice(price);
+            try {
+                item.setPrice(price);
+            } catch (ArithmeticException e) {
+                throw new ArithmeticException(e.getMessage());
+            }
             item.setCategory(category);
             return true;
         }

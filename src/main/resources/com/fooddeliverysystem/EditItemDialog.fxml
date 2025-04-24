@@ -28,6 +28,6 @@
       <Label fx:id="NameLabel" layoutX="27.0" layoutY="153.0" prefHeight="18.0" prefWidth="41.0" text="Name:" />
       <Label fx:id="PriceLabel" layoutX="27.0" layoutY="204.0" prefHeight="18.0" prefWidth="48.0" text="Price:" />
       <Label fx:id="CategoryLabel" layoutX="27.0" layoutY="256.0" text="Category:" />
-      <Button fx:id="saveButton" layoutX="118.0" layoutY="294.0" mnemonicParsing="false" onAction="#switchtoSuccess" text="Save" />
+      <Button fx:id="saveButton" layoutX="118.0" layoutY="294.0" mnemonicParsing="false" onAction="#saveChanges" text="Save" />
    </children>
 </AnchorPane>
