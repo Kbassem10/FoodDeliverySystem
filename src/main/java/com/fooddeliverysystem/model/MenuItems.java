@@ -5,9 +5,10 @@ public class MenuItems {
     private String name;
     private double price;
     private String category;
-    
+    private String imagePath; // <-- Add this line
+
     // parametrized Constructor
-    public MenuItems(String itemId, String name, double price, String category) {
+    public MenuItems(String itemId, String name, double price, String category, String imagePath) {
         if (price < 0){
             throw new ArithmeticException("Negative numbers are not allowed for a price");
         }
@@ -15,16 +16,19 @@ public class MenuItems {
         this.name = name;
         this.price = price;
         this.category = category;
+        this.imagePath = imagePath;
     }
-    
+
+    // Old constructor for backward compatibility
+    public MenuItems(String itemId, String name, double price, String category) {
+        this(itemId, name, price, category, null);
+    }
+
     // Default constructor
     public MenuItems() {
-        this.itemId = "";
-        this.name = "";
-        this.price = 0.0;
-        this.category = "";
+        this("", "", 0.0, "", null);
     }
-    
+
     // setters and getters
     public String getItemId() {
         return itemId;
@@ -60,7 +64,15 @@ public class MenuItems {
     public void setCategory(String category) {
         this.category = category;
     }
-    
+
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
+    }
+
     @Override
     public String toString() {
         return name + " - $" + price;

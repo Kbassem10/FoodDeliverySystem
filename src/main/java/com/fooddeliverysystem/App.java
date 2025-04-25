@@ -11,16 +11,26 @@ import javafx.stage.Stage;
 public class App extends Application {
 
     private static Scene scene;
+    private static Stage primaryStage;
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("MainMenu"), 840, 680);
+        primaryStage = stage; 
+        Parent root = loadFXML("HomePage");
+        scene = new Scene(root);
         stage.setScene(scene);
+        stage.sizeToScene();
+        stage.setX(0);
+        stage.setY(0);
         stage.show();
     }
 
     static void setRoot(String fxml) throws IOException {
-        scene.setRoot(loadFXML(fxml));
+        Parent root = loadFXML(fxml);
+        scene.setRoot(root);
+        primaryStage.sizeToScene();
+        primaryStage.setX(0);
+        primaryStage.setY(0);
     }
 
     private static Parent loadFXML(String fxml) throws IOException {

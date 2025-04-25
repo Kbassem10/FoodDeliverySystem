@@ -1,31 +1,32 @@
 package com.fooddeliverysystem;
 
 import java.io.IOException;
+
 import javafx.fxml.FXML;
 
 public class AdminMenuController {
 
     @FXML
-    private void switchToMainMenu() throws IOException { 
-        App.setRoot("MainMenu"); 
-    }
-    @FXML
-    private void switchToAddItemDialog() throws IOException { 
-        App.setRoot("Additemdialog"); 
-    }
-    
-    @FXML
-    private void switchToEditItemDialog() throws IOException { 
-        App.setRoot("EditItemDialog"); 
+    private void switchtoAddItem() throws IOException {
+        App.setRoot("AddItem");
     }
 
     @FXML
-    private void switchToRemoveItemDialog() throws IOException {
-        App.setRoot("RemoveItemDialog"); 
+    private void switchtoEditItem() throws IOException {
+        App.setRoot("EditItem");
     }
 
     @FXML
-    private void viewTotalSales() throws IOException {
-        App.setRoot("ViewTotalSales");
+    private void switchtoRemoveItem() throws IOException {
+        App.setRoot("RemoveItem");
+    }
+
+    @FXML
+    private void switchtoViewSales() throws IOException {
+        App.setRoot("ViewSales");
+    }
+    @FXML
+    private void switchtoHome() throws IOException {
+        App.setRoot("HomePage");
     }
 }

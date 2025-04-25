@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefWidth="400" prefHeight="500" style="-fx-background-color: #2c292e;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fooddeliverysystem.RemoveItemController">
+    <children>
+        <Label text="Remove Menu Item" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: white;"
+               layoutX="100" layoutY="25" prefWidth="200" alignment="CENTER"/>
+        <TextField fx:id="searchIdField" promptText="Enter Item ID"
+                   layoutX="100" layoutY="70" prefWidth="120"/>
+        <Button text="Load" onAction="#handleLoadItem"
+                style="-fx-background-color: #da7c10; -fx-text-fill: black;"
+                layoutX="230" layoutY="70" prefWidth="70"/>
+        <TextField fx:id="itemIdField" promptText="Item ID"
+                   layoutX="100" layoutY="110" prefWidth="200" editable="false"/>
+        <TextField fx:id="nameField" promptText="Name"
+                   layoutX="100" layoutY="150" prefWidth="200" editable="false"/>
+        <TextField fx:id="priceField" promptText="Price"
+                   layoutX="100" layoutY="190" prefWidth="200" editable="false"/>
+        <TextField fx:id="categoryField" promptText="Category"
+                   layoutX="100" layoutY="230" prefWidth="200" editable="false"/>
+        <ImageView fx:id="itemImageView" fitWidth="120" fitHeight="100" preserveRatio="true"
+                   layoutX="140" layoutY="270"/>
+        <Button text="Remove Item" onAction="#handleRemoveItem"
+                style="-fx-background-color: #da7c10; -fx-text-fill: black; -fx-font-weight: bold;"
+                layoutX="140" layoutY="380" prefWidth="120"/>
+        <Label fx:id="statusLabel" textFill="red"
+               layoutX="100" layoutY="415" prefWidth="200" alignment="CENTER"/>
+        <Button text="Back to Admin Menu" onAction="#handleBackToAdminMenu"
+                style="-fx-background-color: #da7c10; -fx-text-fill: black;"
+                layoutX="70" layoutY="450" prefWidth="120"/>
+        <Button text="Home Page" onAction="#handleHomePage"
+                style="-fx-background-color: #da7c10; -fx-text-fill: black;"
+                layoutX="210" layoutY="450" prefWidth="120"/>
+    </children>
+</AnchorPane>
