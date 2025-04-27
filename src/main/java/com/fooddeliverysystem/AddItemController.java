@@ -42,6 +42,7 @@ public class AddItemController {
             selectedImageFile = file;
             imagePathLabel.setText(file.getName());
             itemImageView.setImage(new Image(file.toURI().toString()));
+            System.out.println("Selected image: " + file.getAbsolutePath());
         }
     }
 

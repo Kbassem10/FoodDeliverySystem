@@ -23,6 +23,7 @@ public class App extends Application {
         stage.setX(0);
         stage.setY(0);
         stage.show();
+        stage.setTitle("Food Delivery System");
     }
 
     static void setRoot(String fxml) throws IOException {
