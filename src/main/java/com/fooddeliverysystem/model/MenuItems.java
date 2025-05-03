@@ -5,7 +5,7 @@ public class MenuItems {
     private String name;
     private double price;
     private String category;
-    private String imagePath; // <-- Add this line
+    private String imagePath;
 
     // parametrized Constructor
     public MenuItems(String itemId, String name, double price, String category, String imagePath) {

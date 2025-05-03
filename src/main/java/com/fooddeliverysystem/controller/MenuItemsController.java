@@ -38,7 +38,6 @@ public class MenuItemsController {
         addMenuItem(new MenuItems("D2", "Water", 0.99, "Drink", System.getProperty("user.dir") + "/src/main/resources/com/fooddeliverysystem/images/Water.jpeg"));
     }
     
-    
     public List<MenuItems> getAllMenuItems() {
         return new ArrayList<>(menuItemsList);
     }
@@ -58,25 +57,25 @@ public class MenuItemsController {
                 .orElse(null);
     }
     
-    //Update menu item
-
-    public boolean updateMenuItem(String itemId, String name, double price, String category) {
+    //Update menu item - Added imagePath parameter
+    public boolean updateMenuItem(String itemId, String name, double price, String category, String imagePath) {
         MenuItems item = getMenuItemById(itemId);
         if (item != null) {
             item.setName(name);
             try {
                 item.setPrice(price);
             } catch (ArithmeticException e) {
-                throw new ArithmeticException(e.getMessage());
+                System.err.println("Error setting price for item " + itemId + ": " + e.getMessage());
+                return false;
             }
             item.setCategory(category);
+            item.setImagePath(imagePath);
             return true;
         }
         return false;
     }
     
     //Delete menu item
-
     public boolean deleteMenuItem(String itemId) {
         MenuItems item = getMenuItemById(itemId);
         if (item != null) {

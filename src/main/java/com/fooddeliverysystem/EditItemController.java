@@ -1,15 +1,17 @@
 package com.fooddeliverysystem;
 
+import java.io.File;
+
 import com.fooddeliverysystem.controller.MenuItemsController;
 import com.fooddeliverysystem.model.MenuItems;
+
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 import javafx.stage.Window;
-
-import java.io.File;
 
 public class EditItemController {
     @FXML
@@ -49,6 +51,27 @@ public class EditItemController {
         itemImageView.setImage(null);
         imagePathLabel.setText("No image selected");
         selectedImageFile = null;
+
+        String imagePath = loadedItem.getImagePath();
+        if (imagePath != null && !imagePath.isEmpty()) {
+            try {
+                File file = new File(imagePath);
+                if (file.exists() && file.isFile()) {
+                    itemImageView.setImage(new Image(file.toURI().toString()));
+                    imagePathLabel.setText(file.getName());
+                    selectedImageFile = file;
+                } else {
+                    imagePathLabel.setText("Image file not found");
+                    System.err.println("Image file not found: " + imagePath);
+                }
+            } catch (Exception e) {
+                imagePathLabel.setText("Error loading image");
+                itemImageView.setImage(null);
+                System.err.println("Error loading image: " + imagePath + " - " + e.getMessage());
+                e.printStackTrace();
+            }
+        }
+
         statusLabel.setText("");
     }
 
@@ -77,29 +100,40 @@ public class EditItemController {
         String name = nameField.getText().trim();
         String priceText = priceField.getText().trim();
         String category = categoryField.getText().trim();
+        String imagePath;
+        if (selectedImageFile != null) {
+            imagePath = selectedImageFile.getAbsolutePath();
+        } else {
+            imagePath = loadedItem.getImagePath();
+        }
 
         if (name.isEmpty() || priceText.isEmpty() || category.isEmpty()) {
             statusLabel.setText("Please fill all fields.");
+            return;
+        }
+        if (imagePath == null || imagePath.isEmpty()) {
+            statusLabel.setText("Please ensure an image is associated with the item.");
             return;
         }
 
         double price;
         try {
             price = Double.parseDouble(priceText);
-            if (price < 0) throw new NumberFormatException();
+            if (price < 0) throw new NumberFormatException("Price cannot be negative.");
         } catch (NumberFormatException e) {
-            statusLabel.setText("Invalid price.");
+            statusLabel.setText("Invalid price: " + e.getMessage());
             return;
         }
 
         boolean updated = MenuItemsController.getInstance().updateMenuItem(
-            loadedItem.getItemId(), name, price, category
+            loadedItem.getItemId(), name, price, category, imagePath
         );
         if (updated) {
             statusLabel.setText("Item updated successfully!");
             loadedItem.setName(name);
             loadedItem.setPrice(price);
             loadedItem.setCategory(category);
+            loadedItem.setImagePath(imagePath);
         } else {
             statusLabel.setText("Failed to update item.");
         }

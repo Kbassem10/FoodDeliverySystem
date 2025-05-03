@@ -2,8 +2,10 @@ package com.fooddeliverysystem;
 
 import com.fooddeliverysystem.controller.MenuItemsController;
 import com.fooddeliverysystem.model.MenuItems;
+
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 
 public class RemoveItemController {
@@ -38,6 +40,7 @@ public class RemoveItemController {
         priceField.setText(String.valueOf(loadedItem.getPrice()));
         categoryField.setText(loadedItem.getCategory());
 
+        // To make sure that it's hidden without messing with the .fxml files
         itemImageView.setImage(null);
         statusLabel.setText("");
     }

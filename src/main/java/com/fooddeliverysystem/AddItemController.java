@@ -1,15 +1,17 @@
 package com.fooddeliverysystem;
 
+import java.io.File;
+
 import com.fooddeliverysystem.controller.MenuItemsController;
 import com.fooddeliverysystem.model.MenuItems;
+
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 import javafx.stage.Window;
-
-import java.io.File;
 
 public class AddItemController {
     @FXML
@@ -61,9 +63,13 @@ public class AddItemController {
         double price;
         try {
             price = Double.parseDouble(priceText);
-            if (price < 0) throw new NumberFormatException();
         } catch (NumberFormatException e) {
             statusLabel.setText("Invalid price.");
+            return;
+        }
+
+        if (price < 0){
+            statusLabel.setText("Invalid Negative Number");
             return;
         }
 
