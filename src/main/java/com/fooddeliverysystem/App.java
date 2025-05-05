@@ -19,9 +19,9 @@ public class App extends Application {
         Parent root = loadFXML("HomePage");
         scene = new Scene(root);
         stage.setScene(scene);
-        stage.sizeToScene();
-        stage.setX(0);
-        stage.setY(0);
+        // Set initial size
+        stage.setWidth(1400);
+        stage.setHeight(700);
         stage.show();
         stage.setTitle("Food Delivery System");
     }
@@ -29,9 +29,6 @@ public class App extends Application {
     static void setRoot(String fxml) throws IOException {
         Parent root = loadFXML(fxml);
         scene.setRoot(root);
-        primaryStage.sizeToScene();
-        primaryStage.setX(0);
-        primaryStage.setY(0);
     }
 
     private static Parent loadFXML(String fxml) throws IOException {

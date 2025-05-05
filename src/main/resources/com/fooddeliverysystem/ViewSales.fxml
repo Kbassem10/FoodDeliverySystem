@@ -3,15 +3,16 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefWidth="400" prefHeight="500" style="-fx-background-color: #2c292e;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fooddeliverysystem.ViewSalesController">
+<AnchorPane style="-fx-background-color: #2c292e;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fooddeliverysystem.ViewSalesController">
     <children>
         <Label text="View Sales" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: white;"
-               layoutX="120" layoutY="25" prefWidth="160" alignment="CENTER"/>
+               layoutX="120" layoutY="25" prefWidth="160" alignment="CENTER" AnchorPane.topAnchor="25.0" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="120.0"/>
         <Label text="Today's Sales:" style="-fx-font-size: 16px; -fx-text-fill: white;"
-               layoutX="50" layoutY="70"/>
+               layoutX="50" layoutY="70" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="70.0"/>
         <Label fx:id="todaySalesLabel" text="0.00 EGP" style="-fx-font-size: 16px; -fx-text-fill: #da7c10;"
-               layoutX="180" layoutY="70"/>
-        <TableView fx:id="salesTable" layoutX="50" layoutY="110" prefWidth="300" prefHeight="250" style="-fx-background-color: #fff;">
+               layoutX="180" layoutY="70" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="70.0"/>
+        <TableView fx:id="salesTable" layoutX="50" layoutY="110" prefWidth="300" prefHeight="250" style="-fx-background-color: #fff;"
+                   AnchorPane.topAnchor="110.0" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0">
             <columns>
                 <TableColumn fx:id="dateColumn" text="Date" prefWidth="150"/>
                 <TableColumn fx:id="amountColumn" text="Sales (EGP)" prefWidth="150"/>
@@ -19,9 +20,9 @@
         </TableView>
         <Button text="Back to Admin Menu" onAction="#handleBackToAdminMenu"
                 style="-fx-background-color: #da7c10; -fx-text-fill: black;"
-                layoutX="60" layoutY="400" prefWidth="120"/>
+                layoutX="60" layoutY="400" prefWidth="120" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="60.0"/>
         <Button text="Home Page" onAction="#handleHomePage"
                 style="-fx-background-color: #da7c10; -fx-text-fill: black;"
-                layoutX="220" layoutY="400" prefWidth="120"/>
+                layoutX="220" layoutY="400" prefWidth="120" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="60.0"/>
     </children>
 </AnchorPane>

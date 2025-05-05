@@ -4,35 +4,37 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefWidth="400" prefHeight="500" style="-fx-background-color: #2c292e;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fooddeliverysystem.RemoveItemController">
+<!-- Removed prefWidth and prefHeight -->
+<AnchorPane style="-fx-background-color: #2c292e;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fooddeliverysystem.RemoveItemController">
     <children>
         <Label text="Remove Menu Item" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: white;"
-               layoutX="100" layoutY="25" prefWidth="200" alignment="CENTER"/>
+               layoutX="100" layoutY="25" prefWidth="200" alignment="CENTER" AnchorPane.topAnchor="25.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0"/>
         <TextField fx:id="searchIdField" promptText="Enter Item ID"
-                   layoutX="100" layoutY="70" prefWidth="120"/>
+                   layoutX="100" layoutY="70" prefWidth="120" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="70.0"/>
         <Button text="Load" onAction="#handleLoadItem"
                 style="-fx-background-color: #da7c10; -fx-text-fill: black;"
-                layoutX="230" layoutY="70" prefWidth="70"/>
+                layoutX="230" layoutY="70" prefWidth="70" AnchorPane.leftAnchor="230.0" AnchorPane.topAnchor="70.0"/>
         <TextField fx:id="itemIdField" promptText="Item ID"
-                   layoutX="100" layoutY="110" prefWidth="200" editable="false"/>
+                   layoutX="100" layoutY="110" prefWidth="200" editable="false" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="110.0"/>
         <TextField fx:id="nameField" promptText="Name"
-                   layoutX="100" layoutY="150" prefWidth="200" editable="false"/>
+                   layoutX="100" layoutY="150" prefWidth="200" editable="false" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="150.0"/>
         <TextField fx:id="priceField" promptText="Price"
-                   layoutX="100" layoutY="190" prefWidth="200" editable="false"/>
+                   layoutX="100" layoutY="190" prefWidth="200" editable="false" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="190.0"/>
         <TextField fx:id="categoryField" promptText="Category"
-                   layoutX="100" layoutY="230" prefWidth="200" editable="false"/>
+                   layoutX="100" layoutY="230" prefWidth="200" editable="false" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="230.0"/>
         <ImageView fx:id="itemImageView" fitWidth="120" fitHeight="100" preserveRatio="true"
-                   layoutX="140" layoutY="270"/>
+                   layoutX="140" layoutY="270" AnchorPane.topAnchor="270.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="140.0"/>
         <Button text="Remove Item" onAction="#handleRemoveItem"
                 style="-fx-background-color: #da7c10; -fx-text-fill: black; -fx-font-weight: bold;"
-                layoutX="140" layoutY="380" prefWidth="120"/>
+                layoutX="140" layoutY="380" prefWidth="120" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="140.0"/>
         <Label fx:id="statusLabel" textFill="red"
-               layoutX="100" layoutY="415" prefWidth="200" alignment="CENTER"/>
+               layoutX="100" layoutY="415" prefWidth="200" alignment="CENTER" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0"/>
+        <!-- Added anchors to Buttons -->
         <Button text="Back to Admin Menu" onAction="#handleBackToAdminMenu"
                 style="-fx-background-color: #da7c10; -fx-text-fill: black;"
-                layoutX="70" layoutY="450" prefWidth="120"/>
+                layoutX="70" layoutY="450" prefWidth="120" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="70.0"/>
         <Button text="Home Page" onAction="#handleHomePage"
                 style="-fx-background-color: #da7c10; -fx-text-fill: black;"
-                layoutX="210" layoutY="450" prefWidth="120"/>
+                layoutX="210" layoutY="450" prefWidth="120" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="70.0"/>
     </children>
 </AnchorPane>

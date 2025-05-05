@@ -4,22 +4,26 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?> <!-- Changed Pane to VBox for easier button management -->
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="237.0" prefWidth="300.0" style="-fx-background-color: #2c292e;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fooddeliverysystem.HomePageController">
+<!-- Removed size constraints, added minWidth/minHeight -->
+<AnchorPane minHeight="240.0" minWidth="300.0" style="-fx-background-color: #2c292e;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fooddeliverysystem.HomePageController">
    <children>
-      <ImageView fitHeight="130.0" fitWidth="99.0" layoutX="8.0" pickOnBounds="true" preserveRatio="true">
+      <!-- Anchored ImageView -->
+      <ImageView fitHeight="130.0" fitWidth="99.0" layoutX="8.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="0.0">
          <image>
             <Image url="@Images/Logo.png" />
          </image>
       </ImageView>
-      <Pane cacheShape="false" centerShape="false" layoutY="112.0" prefHeight="123.0" prefWidth="100.0" scaleShape="false" style="-fx-background-color: da7c10;">
+      <!-- Changed Pane to VBox, anchored it, removed fixed size -->
+      <VBox alignment="TOP_CENTER" spacing="0.0" style="-fx-background-color: da7c10;" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <Button fx:id="MenuButton" layoutY="30.0" mnemonicParsing="false" onAction="#switchtoMenu" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #da7c10;" text="Menu" />
-            <Button fx:id="OrdersButton" layoutY="60.0" mnemonicParsing="false" onAction="#switchtoOrders" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #da7c10;" text="Orders" />
-            <Button fx:id="HomeButton" mnemonicParsing="false" onAction="#switchtoHome" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #da7c10;" text="Home" />
-            <Button fx:id="AdminButton" layoutY="90.0" mnemonicParsing="false" onAction="#switchtoAdminLogin" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #da7c10;" text="Admin Login" />
+            <!-- Removed layoutY, set prefWidth to MAX_VALUE -->
+            <Button fx:id="HomeButton" mnemonicParsing="false" onAction="#switchtoHome" prefHeight="30.0" prefWidth="Infinity" style="-fx-background-color: #da7c10;" text="Home" VBox.vgrow="ALWAYS"/>
+            <Button fx:id="MenuButton" mnemonicParsing="false" onAction="#switchtoMenu" prefHeight="30.0" prefWidth="Infinity" style="-fx-background-color: #da7c10;" text="Menu" VBox.vgrow="ALWAYS"/>
+            <Button fx:id="OrdersButton" mnemonicParsing="false" onAction="#switchtoOrders" prefHeight="30.0" prefWidth="Infinity" style="-fx-background-color: #da7c10;" text="Orders" VBox.vgrow="ALWAYS"/>
+            <Button fx:id="AdminButton" mnemonicParsing="false" onAction="#switchtoAdminLogin" prefHeight="30.0" prefWidth="Infinity" style="-fx-background-color: #da7c10;" text="Admin Login" VBox.vgrow="ALWAYS"/>
          </children>
-      </Pane>
+      </VBox>
    </children>
 </AnchorPane>
