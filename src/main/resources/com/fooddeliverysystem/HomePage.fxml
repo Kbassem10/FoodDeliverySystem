@@ -18,11 +18,11 @@
       <!-- Changed Pane to VBox, anchored it, removed fixed size -->
       <VBox alignment="TOP_CENTER" spacing="0.0" style="-fx-background-color: da7c10;" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <!-- Removed layoutY, set prefWidth to MAX_VALUE -->
-            <Button fx:id="HomeButton" mnemonicParsing="false" onAction="#switchtoHome" prefHeight="30.0" prefWidth="Infinity" style="-fx-background-color: #da7c10;" text="Home" VBox.vgrow="ALWAYS"/>
-            <Button fx:id="MenuButton" mnemonicParsing="false" onAction="#switchtoMenu" prefHeight="30.0" prefWidth="Infinity" style="-fx-background-color: #da7c10;" text="Menu" VBox.vgrow="ALWAYS"/>
-            <Button fx:id="OrdersButton" mnemonicParsing="false" onAction="#switchtoOrders" prefHeight="30.0" prefWidth="Infinity" style="-fx-background-color: #da7c10;" text="Orders" VBox.vgrow="ALWAYS"/>
-            <Button fx:id="AdminButton" mnemonicParsing="false" onAction="#switchtoAdminLogin" prefHeight="30.0" prefWidth="Infinity" style="-fx-background-color: #da7c10;" text="Admin Login" VBox.vgrow="ALWAYS"/>
+            <!-- Removed layoutY, set prefWidth to MAX_VALUE, added maxWidth -->
+            <Button fx:id="HomeButton" mnemonicParsing="false" onAction="#switchtoHome" prefHeight="30.0" prefWidth="Infinity" maxWidth="250.0" style="-fx-background-color: #da7c10;" text="Home" VBox.vgrow="ALWAYS"/>
+            <Button fx:id="MenuButton" mnemonicParsing="false" onAction="#switchtoMenu" prefHeight="30.0" prefWidth="Infinity" maxWidth="250.0" style="-fx-background-color: #da7c10;" text="Menu" VBox.vgrow="ALWAYS"/>
+            <Button fx:id="OrdersButton" mnemonicParsing="false" onAction="#switchtoOrders" prefHeight="30.0" prefWidth="Infinity" maxWidth="250.0" style="-fx-background-color: #da7c10;" text="Orders" VBox.vgrow="ALWAYS"/>
+            <Button fx:id="AdminButton" mnemonicParsing="false" onAction="#switchtoAdminLogin" prefHeight="30.0" prefWidth="Infinity" maxWidth="250.0" style="-fx-background-color: #da7c10;" text="Admin Login" VBox.vgrow="ALWAYS"/>
          </children>
       </VBox>
    </children>
