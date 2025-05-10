@@ -58,6 +58,8 @@ Or run the generated JAR file:
 java -jar target/food_delivery_system-1.jar
 ```
 
+Or Simply Run the App.java file
+
 ## Features
 
 ### Menu Management
