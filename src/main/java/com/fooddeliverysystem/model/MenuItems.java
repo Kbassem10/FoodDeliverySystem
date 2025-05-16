@@ -20,6 +20,7 @@ public class MenuItems {
     }
 
     // Old constructor for backward compatibility
+    //without the image
     public MenuItems(String itemId, String name, double price, String category) {
         this(itemId, name, price, category, null);
     }

@@ -14,13 +14,13 @@ public class MenuItemsController {
     //create an instance "Important to run in javaFX"
     private static MenuItemsController instance;
     
-    //contructor for the class of the contorler to ser a value for the menu
+    //contructor for the class of the controller to ser a value for the menu
     private MenuItemsController() {
         menuItemsList = new ArrayList<>();
         initializeMenuItems();
     }
     
-    //another constructor to getInstance it's improtant to run the javaFX
+    //another constructor to getInstance it's important to run the javaFX
     public static MenuItemsController getInstance() {
         if (instance == null) {
             instance = new MenuItemsController();
@@ -31,11 +31,11 @@ public class MenuItemsController {
     //initialize MenuItems by some value in the start of the app
     private void initializeMenuItems() {
         // Add some sample menu items
-        addMenuItem(new MenuItems("P1", "Pizza Margherita", 9.99, "Pizza", System.getProperty("user.dir") + "/src/main/resources/com/fooddeliverysystem/images/PizzaMargerita.jpeg"));
-        addMenuItem(new MenuItems("P2", "Pizza Pepperoni", 11.99, "Pizza", System.getProperty("user.dir") + "/src/main/resources/com/fooddeliverysystem/images/PizzaPepperoni.jpeg"));
-        addMenuItem(new MenuItems("B1", "Cheeseburger", 7.99, "Burger", System.getProperty("user.dir") + "/src/main/resources/com/fooddeliverysystem/images/cheeseburger.jpeg"));
-        addMenuItem(new MenuItems("D1", "V7", 1.99, "Drink", System.getProperty("user.dir") + "/src/main/resources/com/fooddeliverysystem/images/V7.jpeg"));
-        addMenuItem(new MenuItems("D2", "Water", 0.99, "Drink", System.getProperty("user.dir") + "/src/main/resources/com/fooddeliverysystem/images/Water.jpeg"));
+        addMenuItem(new MenuItems("P1", "Pizza Margherita", 109.99, "Pizza", System.getProperty("user.dir") + "/src/main/resources/com/fooddeliverysystem/images/PizzaMargerita.jpeg"));
+        addMenuItem(new MenuItems("P2", "Pizza Pepperoni", 119.99, "Pizza", System.getProperty("user.dir") + "/src/main/resources/com/fooddeliverysystem/images/PizzaPepperoni.jpeg"));
+        addMenuItem(new MenuItems("B1", "Cheeseburger", 179.99, "Burger", System.getProperty("user.dir") + "/src/main/resources/com/fooddeliverysystem/images/cheeseburger.jpeg"));
+        addMenuItem(new MenuItems("D1", "V7", 12.99, "Drink", System.getProperty("user.dir") + "/src/main/resources/com/fooddeliverysystem/images/V7.jpeg"));
+        addMenuItem(new MenuItems("D2", "Water", 4.99, "Drink", System.getProperty("user.dir") + "/src/main/resources/com/fooddeliverysystem/images/Water.jpeg"));
     }
     
     public List<MenuItems> getAllMenuItems() {
@@ -89,5 +89,4 @@ public class MenuItemsController {
         return menuItemsList.stream()
                 .anyMatch(item -> item.getItemId().equals(itemId));
     }
-
 }

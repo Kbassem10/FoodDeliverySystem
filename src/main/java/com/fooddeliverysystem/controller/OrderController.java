@@ -13,7 +13,7 @@ public class OrderController {
     
     // In-memory storage of orders (similar to Django's ORM but in memory)
     private Map<String, Order> orders;
-    
+
     // Reference to the MenuItemsController (like importing another view/service in Django)
     private MenuItemsController menuItemsController;
     
@@ -79,8 +79,11 @@ public class OrderController {
         String orderId = String.valueOf(nextOrderId++); // Assign and increment
         currentOrder.setOrderId(orderId);
         currentOrder.setOrderStatus("Confirmed");
+
+        //in the hashmap
         orders.put(orderId, currentOrder);
-        
+        //{7, Order_object}
+
         // Record the sale
         salesController.recordSale(currentOrder);
         
@@ -119,14 +122,14 @@ public class OrderController {
     }
     
     //Update order status
-    public boolean updateOrderStatus(String orderId, String status) {
-        Order order = getOrder(orderId);
-        if (order != null) {
-            order.setOrderStatus(status);
-            return true;
-        }
-        return false;
-    }
+    // public boolean updateOrderStatus(String orderId, String status) {
+    //     Order order = getOrder(orderId);
+    //     if (order != null) {
+    //         order.setOrderStatus(status);
+    //         return true;
+    //     }
+    //     return false;
+    // }
     
     //Get the total sales for today
     public double getTodayTotalSales() {

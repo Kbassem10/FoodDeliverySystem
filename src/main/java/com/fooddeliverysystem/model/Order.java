@@ -20,7 +20,7 @@ public class Order {
     private String orderStatus;
     private LocalDateTime orderTime;
     
-    private String orderId; // <-- Add this line
+    private String orderId;
     
     // parametrized constructor
     public Order(String customerName, String customerAddress, String customerPhone) {
